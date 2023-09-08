@@ -1,0 +1,124 @@
+:root{
+    --hamberger-bg: white;
+}
+h5{
+    text-align: center;
+}
+.profile{
+    z-index: 100;
+    margin: 30%;
+    border-radius: 1000px;
+}
+.profile:hover{
+
+    transform: scale(1.2);
+}
+.massageBox{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 230px;
+    height: 100%;
+    background-color: white;
+}
+.name{
+    text-align: center;
+}
+.FllowButton{
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: yellow;
+}
+.FllowButtonClick:active{
+    transform: scale(1.2);
+}
+.container{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 250px;
+    height: 150px;
+    background-image: url(chicken.jpg);
+}
+.topbar{
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    background-color: white;
+    width: 100%;
+}
+body{
+    background-color: gray;
+    flex-direction: column;
+    align-items: center;
+}
+.hamberger-title{
+    color: white;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.hamberger-container{
+    margin-right: 2%;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background:var(--hamberger-bg)
+}
+.hamberger,
+.hamberger::before,
+.hamberger::after{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    transition: 0.5s;
+    background-color: gray;
+}
+.hamberger::before,.hamberger::after{
+    content: "";
+}
+.hamberger{
+    top: 50%;
+}
+.hamberger::before{
+    top: -20px
+    ;
+}
+.hamberger::after{
+    top: 20px;
+}
+.toggle:checked ~ .hamberger::after{
+    top: 0;
+    transform: rotate(225deg);
+}
+.toggle:checked ~ .hamberger::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.toggle:checked ~ .hamberger{
+    background : var(--hamberger-bg)
+}
+.toggle{
+    opacity: 0;
+}
+.introduceCard{
+    margin-top: 10px;
+    font-size: 10px;
+    overflow: auto;
+    width: 100%;
+    height: 100px;
+
+}
